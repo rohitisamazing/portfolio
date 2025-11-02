@@ -1,0 +1,482 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  background-color: black;
+}
+
+#loader {
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(221,221,221);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+#loader h1{
+  font-size: 5vw;
+  font-family: "Rokkitt", serif;
+  font-weight: 900;
+}
+
+#minicircle {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  z-index: 999;
+  position: absolute;
+  border-radius: 50%;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+
+#main {
+  width: 100%;
+  background-color: black;
+}
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 30px 50px;
+  color: white;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+nav a:nth-child(2) {
+  position: relative;
+  padding: 0px 10px;
+  z-index: 1;
+}
+nav a:nth-child(2):before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: scaleY(2);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+nav a:nth-child(2):after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  transform: scale(0);
+  opacity: 0;
+  transition: 0.3s;
+  z-index: -1;
+}
+
+nav a:nth-child(2):hover {
+  color: black;
+}
+
+nav a:nth-child(2):hover:before {
+  transform: scaleY(1);
+  opacity: 1;
+}
+
+nav a:nth-child(2):hover:after {
+  transform: scaleY(1);
+  opacity: 1;
+}
+
+.header {
+  color: white;
+  opacity: 0.7;
+  margin: 50px 50px;
+  text-transform: uppercase;
+  margin-top: 85px;
+  width: fit-content;
+}
+
+.header h1 {
+  font-size: 9vw;
+  margin-left: 15px;
+  line-height: 1;
+}
+.side {
+  padding-left: 111px;
+}
+
+.header h5 {
+  display: flex;
+  justify-content: end;
+}
+
+.lasttext {
+  text-transform: uppercase;
+  color: white;
+  text-align: end;
+  padding-right: 30px;
+  padding-top: 75px;
+}
+
+.specialP {
+  padding-bottom: 15px;
+}
+
+.herofooter {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  padding: 70px 30px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+}
+
+.herofooter h3 {
+  opacity: 0.7;
+  position: relative;
+  z-index: 1;
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #23abd4, #23abd4 50%, #fff 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.herofooter h3:before {
+  display: block;
+  content: "";
+  width: 0;
+  height: 3px;
+  bottom: -3px;
+  left: 0;
+  z-index: 0;
+  position: absolute;
+  background: #23abd4;
+  transition: all 0.3s ease-in-out;
+}
+
+.herofooter h3:hover {
+  background-position: 0%;
+}
+
+.herofooter h3:hover:before {
+  width: 100%;
+}
+
+.circle {
+  color: black;
+  background-color: white;
+  opacity: 0.7;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.specialHero {
+  padding-right: 165px;
+}
+
+/*Second Heor page */
+
+#secondHero {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  overflow: hidden;
+}
+
+#secondHero h1 {
+  font-family: "Rokkitt", serif;
+  font-size: 30vw;
+  color: white;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-weight: 100;
+  transform: translateX(70%);
+}
+
+/* Second Page */
+
+#second {
+  background-color: black;
+  width: 100%;
+  height: auto;
+  color: #fff;
+  padding-top: 70px;
+  padding-left: 40px;
+}
+
+.elem {
+  position: relative;
+  border-top: 1px solid #888;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.elem h1 {
+  padding: 3%;
+  padding-left: 2%;
+  font-size: 7vw;
+  opacity: 0.7;
+  text-transform: uppercase;
+}
+
+.lastborder {
+  border-top: 1px solid #888;
+  width: 90%;
+}
+
+.elem img {
+  position: absolute;
+  height: 140%;
+  z-index: 999;
+  opacity: 0;
+  /* display: none; */
+}
+
+/* Third Page  */
+
+#about {
+  background-color: black;
+  color: white;
+  width: 100%;
+  padding: 10vw 10vw;
+  padding-left: 35vw;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#about img {
+  width: 270px;
+}
+
+.abouttext {
+  width: 30rem;
+  /* background-color: red; */
+}
+
+.abouttext h5 {
+  opacity: 0.7;
+  margin-bottom: 7px;
+}
+.abouttext p {
+  margin-bottom: 27px;
+  line-height: 1.7;
+}
+
+.abouttext a {
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  padding: 12px 12px;
+  margin-top: 20px;
+}
+
+.abouttext a:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  transition: all 0.5s ease-in-out;
+  transition: margin-right;
+}
+
+#subscribe {
+  width: 100%;
+  height: auto;
+  background-color: black;
+  color: white;
+  padding: 35px 35px;
+  padding-bottom: 130px;
+}
+
+#subscribe h5 {
+  opacity: 0.7;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+#subscribe a {
+  position: relative;
+  text-transform: uppercase;
+  z-index: 1;
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #23abd4, #23abd4 50%, #fff 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  transition: all 0.3s ease-in-out;
+}
+
+#subscribe a:before {
+  display: block;
+  content: "";
+  width: 0;
+  height: 3px;
+  bottom: -3px;
+  left: 0;
+  z-index: 0;
+  position: absolute;
+  background: #23abd4;
+  transition: all 0.3s ease-in-out;
+}
+
+#subscribe a:hover {
+  background-position: 0%;
+}
+
+#subscribe a:hover:before {
+  width: 100%;
+}
+
+/* finalfooter */
+
+#finalfooter {
+  color: white;
+  background-color: black;
+  padding: 30px 30px;
+  display: flex;
+  align-items: centre;
+  justify-content: space-between;
+}
+
+.footerleft {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footerleft h5 {
+  font-weight: bold;
+  font-size: 16px;
+}
+.footerright a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.footerright {
+  display: flex;
+  gap: 50px;
+}
+
+.footerright a {
+  position: relative;
+  z-index: 1;
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #23abd4, #23abd4 50%, #fff 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.footerright a:before {
+  display: block;
+  content: "";
+  width: 0;
+  height: 3px;
+  bottom: -3px;
+  left: 0;
+  z-index: 0;
+  position: absolute;
+  background: #23abd4;
+  transition: all 0.3s ease-in-out;
+}
+
+.footerright a:hover {
+  background-position: 0%;
+}
+
+.footerright a:hover:before {
+  width: 100%;
+}
+
+
+#projects{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+#projects h5{
+  text-transform: uppercase;
+}
+
+#projects a{
+  text-decoration: none;
+  color: white;
+}
+
+#projects a {
+  position: relative;
+  z-index: 1;
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #23abd4, #23abd4 50%, #fff 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+}
+
+#projects a:before {
+  display: block;
+  content: "";
+  width: 0;
+  height: 3px;
+  bottom: -3px;
+  left: 0;
+  z-index: 0;
+  position: absolute;
+  background: #23abd4;
+  transition: all 0.3s ease-in-out;
+}
+
+#projects a:hover {
+  background-position: 0%;
+}
+
+#projects a:hover:before {
+  width: 100%;
+}
+
+
